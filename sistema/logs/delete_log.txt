@@ -1,0 +1,12 @@
+2024-11-07 02:26:47 - Inicio de solicitud de eliminación
+2024-11-07 02:26:47 - POST data: Array
+(
+)
+
+2024-11-07 02:26:47 - Error: Método no permitido - undefined
+2024-11-07 02:27:56 - Inicio de solicitud de eliminación
+2024-11-07 02:27:56 - POST data: Array
+(
+)
+
+2024-11-07 02:27:56 - Error: Método no permitido - undefined

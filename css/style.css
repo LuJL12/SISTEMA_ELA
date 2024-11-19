@@ -1,0 +1,248 @@
+:root {
+	--primario: #3E23FF; /* Color principal */
+	--secundario: #000; /* Color secundario */
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; /* Ajusta el box-sizing para que padding y borde no afecten el ancho/alto */
+}
+
+body {
+	background: #F0F4F3; /* Color de fondo del cuerpo de la página */
+	font-family: 'Quicksand', sans-serif; /* Fuente principal */
+
+	min-height: 100vh; /* Altura mínima para llenar la pantalla */
+	display: flex; /* Centra el contenido usando Flexbox */
+	align-items: center;
+	justify-content: center;
+}
+
+
+.contenedor {
+	width: 90%; /* Ancho relativo al contenedor */
+	max-width: 800px; /* Ancho máximo del contenedor */
+	border-radius: 10px; /* Bordes redondeados */
+	overflow: hidden; /* Oculta contenido que sobresale del contenedor */
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; /* Sombra para darle un efecto de profundidad */
+	background: #fff; /* Fondo blanco */
+	min-height: 60vh; /* Altura mínima */
+	
+	display: grid; /* Usa Grid para dividir en columnas */
+	grid-template-columns: 1fr 1fr; /* Divide en dos columnas iguales */
+}
+
+.columna-izquierda {
+	padding: 40px; /* Espacio interno de la columna izquierda */
+}
+
+.columna-derecha {
+	background-image: url('../images/LOGOELA.png'); /* Imagen de fondo */
+	background-size: cover; /* Cubre todo el área de la columna */
+	background-position-x: center; /* Centra la imagen horizontalmente */
+	filter: brightness(70%); /* Oscurece la imagen un 30% */
+}
+
+
+.header {
+	margin-bottom: 40px; /* Espaciado debajo del encabezado */
+	text-align: center; /* Centra el texto */
+}
+
+.header h1 {
+	color: var(--primario); /* Color del texto principal */
+}
+
+.header p {
+	color: var(--secundario); /* Color del texto secundario */
+}
+
+label {
+	margin-bottom: 10px; /* Margen debajo de cada etiqueta */
+	display: block; /* Se asegura de que la etiqueta ocupe toda la línea */
+	font-weight: 500; /* Grosor de la fuente */
+	color: var(--secundario); /* Color del texto de la etiqueta */
+	font-size: 14px; /* Tamaño de fuente */
+}
+
+.contenedor-input {
+	position: relative; /* Relaciona la posición del ícono dentro del input */
+}
+
+.contenedor-input-login {
+	position: relative; /* Relaciona la posición del ícono dentro del input */
+}
+
+.registro {
+	display: none; /* Oculta el formulario por defecto */
+}
+
+.registro.activo {
+	display: block; /* Muestra el formulario activo */
+}
+
+.exito {
+	background-color: red; /* Fondo rojo para el mensaje de éxito */
+	display: none; /* Oculto por defecto */
+	height: 100%; /* Ocupa toda la altura */
+	flex-direction: column; /* Organiza los elementos en una columna */
+	align-items: center;
+	justify-content: center;
+	gap: 20px; /* Espacio entre elementos */
+}
+
+.exito.activo {
+	display: flex; /* Muestra el mensaje de éxito cuando está activo */
+}
+
+.exito svg {
+	width: 50px; /* Ancho del ícono */
+	height: 50px; /* Alto del ícono */
+	color: var(--primario); /* Color del ícono */
+}
+
+input {
+	height: 50px; /* Altura de los inputs */
+	line-height: 50px; /* Altura de la línea de texto */
+	font-size: 16px; /* Tamaño del texto */
+	width: 100%; /* Ancho completo del contenedor */
+	border: none; /* Sin borde */
+	border-radius: 5px; /* Bordes redondeados */
+	padding: 0 20px 0 45px; /* Espacio interno en el input */
+	margin-bottom: 20px; /* Espaciado entre los inputs */
+	background: #f4f8f7; /* Fondo del input */
+	color: var(--primario); /* Color del texto */
+	font-family: 'Quicksand', sans-serif; /* Fuente del input */
+	border: 2px solid transparent; /* Borde inicial transparente */
+	transition: .3s ease all; /* Efecto de transición para cambios en el input */
+}
+
+input:focus {
+	outline: none; /* Sin borde de enfoque por defecto */
+	border: 2px solid var(--primario); /* Borde cuando está enfocado */
+}
+
+.contenedor-input svg {
+	position: absolute; /* Coloca el ícono dentro del input */
+	color: var(--primario); /* Color del ícono */
+	top: 17px; /* Alinea el ícono verticalmente */
+	left: 17px; /* Alinea el ícono horizontalmente */
+}
+
+.contenedor-boton {
+	display: flex; /* Usa flexbox para centrar el botón */
+	justify-content: center;
+}
+
+button {
+	font-family: 'Quicksand', sans-serif; /* Fuente del botón */
+	font-size: 16px; /* Tamaño de fuente del botón */
+	border-radius: 5px; /* Bordes redondeados */
+	margin-top: 20px; /* Margen superior */
+	background: none; /* Sin fondo inicialmente */
+	height: 50px; /* Altura del botón */
+	color: var(--primario); /* Color del texto */
+	padding: 0 50px; /* Espacio interno horizontal */
+	display: flex; /* Usa flexbox para centrar el contenido */
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario); /* Borde del botón */
+	cursor: pointer; /* Cursor de mano en hover */
+	transition: .3s ease all; /* Transición suave al hover */
+	outline: none; /* Sin borde de enfoque */
+}
+
+button:hover {
+	cursor: pointer; /* Cambia el cursor en hover */
+	background: var(--primario); /* Cambia el fondo en hover */
+	color: #fff; /* Texto en blanco en hover */
+}
+
+button svg {
+	margin-left: 10px; /* Espacio entre el texto y el ícono */
+	width: 20px; /* Ancho del ícono */
+	height: 20px; /* Alto del ícono */
+}
+
+#btn-login {
+	/* Similar a los otros botones */
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;
+}
+
+#btn-login:hover {
+	cursor: pointer;
+	background: var(--primario); /* Cambia el fondo en hover */
+	color: #fff; /* Cambia el color del texto en hover */
+}
+
+#btn-login svg {
+	margin-left: 10px; /* Espacio entre el texto y el ícono */
+	width: 20px;
+	height: 20px;
+}
+
+/* Spinner de carga
+https://codepen.io/wang0nya/pen/bzwQPr 
+https://codepen.io/EastingAndNorthing/pen/aNWrZz
+https://codepen.io/vineethtrv/pen/NWxZqMM
+*/
+
+#spinner:not([hidden]) {
+	position: fixed; /* Fijo en toda la pantalla */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex; /* Centra el spinner */
+	justify-content: center;
+	align-items: center;
+	padding: 0px 10px;
+	z-index: 1; /* Asegura que el spinner esté por encima de todo */
+	background-color: #3333; /* Fondo semitransparente */
+}
+
+#spinner::after {
+	content: ""; /* Crea el contenido del spinner */
+	width: 50px;
+	height: 50px;
+	border: 2px solid #f3f3f3; /* Borde gris claro */
+	border-top: 3px solid #f25a41; /* Borde superior rojo */
+	border-radius: 100%; /* Hace un círculo */
+	will-change: transform;
+	animation: spin 1s infinite linear; /* Anima el giro del spinner */
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg); /* Empieza desde 0 grados */
+	}
+	to {
+		transform: rotate(360deg); /* Gira hasta 360 grados */
+	}
+}
+
+/*ícono dentro de la caja de entrada*/
+.contenedor-input {
+    position: relative; /* Necesario para colocar el ícono de forma absoluta */
+	display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+input[type="password"] {
+    padding-right: 30px; /* Deja espacio para el ícono */
+}
